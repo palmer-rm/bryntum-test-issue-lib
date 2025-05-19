@@ -1,0 +1,56 @@
+{
+  "name": "bryntum-calendar-lib",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build -c vite.config.ts",
+    "build-lib": "rm -rf node_modules && rm package-lock.json && npm i && vite build -c vite.lib.config.ts",
+    "test": "vitest run",
+    "test-watch": "vitest watch",
+    "lint": "eslint ./src --ext .js,.vue",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@bryntum/calendar-thin": "^6.2.1",
+    "@bryntum/calendar-vue-3-thin": "^6.2.1",
+    "@bryntum/core-thin": "^6.2.2",
+    "@bryntum/engine-thin": "^6.2.2",
+    "@bryntum/grid-thin": "^6.2.2",
+    "@bryntum/scheduler-thin": "^6.2.2",
+    "vue": "^3.4.35"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.9.0",
+    "@types/node": "^22.15.19",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "babel-plugin-transform-dynamic-import": "^2.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-vue": "^9.27.0",
+    "path": "^0.12.7",
+    "postcss-html": "^1.8.0",
+    "postcss-scss": "^4.0.9",
+    "sass": "^1.77.4",
+    "typescript": "5.7.3",
+    "vite": "^5.4.15",
+    "vite-plugin-dts": "^3.9.1",
+    "vue-eslint-parser": "^9.4.3",
+    "vue-tsc": "2.1.10"
+  },
+  "main": "./dist/bryntum-calendar-lib.umd.js",
+  "module": "./dist/bryntum-calendar-lib.es.js",
+  "files": [
+    "dist/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/bryntum-calendar-lib.es.js",
+      "require": "./dist/bryntum-calendar-lib.umd.js"
+    }
+  }
+}
