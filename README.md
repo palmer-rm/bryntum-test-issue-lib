@@ -1,7 +1,6 @@
-## **Usage**
+## **Build**
 
-```js
-import { CalendarView } from 'bryntum-calendar-lib';
-
-<CalendarView />
+```
+npm run build-lib
+npm pack
 ```
