@@ -6,8 +6,6 @@
     "dev": "vite",
     "build": "vite build -c vite.config.ts",
     "build-lib": "rm -rf node_modules && rm package-lock.json && npm i && vite build -c vite.lib.config.ts",
-    "test": "vitest run",
-    "test-watch": "vitest watch",
     "lint": "eslint ./src --ext .js,.vue",
     "typecheck": "vue-tsc --noEmit"
   },
